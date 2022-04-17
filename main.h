@@ -4,34 +4,15 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
-<<<<<<< HEAD
-#include <stdarg.h>
-#include <limits.h>
-#include <stdint.h>
-
-/**
- * struct _formatter - struct for printer functions
-=======
 
 /**
  * struct print - struct for printer functions
->>>>>>> 1df414c68d9ad00d5dab058a95b5d269d2cb1ff2
  * @type_arg: identifier
  * @f: pointer to a printer functions
  *
  * Description: struct that stores pointers to a
  * printer functions.
  */
-<<<<<<< HEAD
-typedef struct _format
-{
-	char *type_arg;
-	int (*f)(va_list, char *, unsigned int);
-} _formatter_t;
-
-int print_add(va_list arg, char *buf, unsigned int buff_index);
-char *print_s(va_list list);
-=======
 typedef struct print
 {
 	char *type_arg;
@@ -76,6 +57,5 @@ char *fill_oct_array(char *bnr, char *oct);
 char *fill_long_oct_array(char *bnr, char *oct);
 char *fill_short_oct_array(char *bnr, char *oct);
 char *fill_hex_array(char *bnr, char *hex, int isupp, int limit);
->>>>>>> 1df414c68d9ad00d5dab058a95b5d269d2cb1ff2
 
 #endif

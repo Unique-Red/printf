@@ -25,7 +25,6 @@ The available conversion specifiers are:
 
 * %s: Prints a string of characters.
 
-
 ## Usage
 ---
 
@@ -194,11 +193,9 @@ Function That Prints An Integer Begining With 0 And u.
 #### ev_print_func.c
 Function That Returns The Amount Of Identifiers.
 
-
 # Authors
 <a href="https://github.com/Unique-Red/printf">Noah Useghan</a>
 <br/>
 <a href="https://github.com/bryansomto/printf">Ike-Adinnu Somtochukwu</a>
  
-
- # End
+# End

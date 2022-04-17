@@ -2,7 +2,7 @@
 
 /**
  * ev_print_func - returns the amount of identifiers.
- * @s: argument indentifier
+ * @s: argument identifier
  * @index: index of argument identifier.
  * Return: amount of identifiers.
  */
