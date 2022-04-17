@@ -1,7 +1,11 @@
 #include "main.h"
 
 /**
+<<<<<<< HEAD
  * fill_hex_array - prints decimal in hex
+=======
+ * fill_hex_array - writes the character c to stdout
+>>>>>>> 1df414c68d9ad00d5dab058a95b5d269d2cb1ff2
  *
  * @bnr: array where is stored the binary.
  * @hex: array where is stored the hexadecimal.
