@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_oct - prints decimal number in octal
- * @arguments: input number
+ * prinnoct - print the number in octal begining with zero
+ * @arguments: input string
  * @buf: buffer pointer
  * @ibuf: index for buffer pointer
- * Return: number of chars printed.
+ * Return: number of chars printed
  */
-int print_oct(va_list arguments, char *buf, unsigned int ibuf)
+int prinnoct(va_list arguments, char *buf, unsigned int ibuf)
 {
 	int int_input, i, isnegative, count, first_digit;
 	char *octal, *binary;
@@ -24,6 +24,7 @@ int print_oct(va_list arguments, char *buf, unsigned int ibuf)
 		int_input = (int_input * -1) - 1;
 		isnegative = 1;
 	}
+	ibuf = handl_buf(buf, '0', ibuf);
 	binary = malloc(sizeof(char) * (32 + 1));
 	binary = fill_binary_array(binary, int_input, isnegative, 32);
 	octal = malloc(sizeof(char) * (11 + 1));
@@ -40,5 +41,5 @@ int print_oct(va_list arguments, char *buf, unsigned int ibuf)
 	}
 	free(binary);
 	free(octal);
-	return (count);
+	return (count + 1);
 }
