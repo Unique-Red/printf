@@ -1,26 +1,32 @@
 #include "main.h"
 
 /**
- * rev_string - reverse string
- * @s: string
- * Return: s
+ * print_rev - writes the str in reverse
+ * @arguments: input string
+ * @buf: buffer pointer
+ * @ibuf: index for buffer pointer
+ * Return: number of chars printed.
  */
-void *rev_string(char *s)
+int print_rev(va_list arguments, char *buf, unsigned int ibuf)
 {
-	char b;
-	int y, x, a;
+	char *str;
+	unsigned int i;
+	int j = 0;
+	char nill[] = "(llun)";
 
-	if (s == NULL)
-		return (0);
-
-	y = _strlen(s);
-	x = _strlen(s) / 2;
-
-	for (a = 0; a < x; a++)
+	str = va_arg(arguments, char *);
+	if (str == NULL)
 	{
-		b = s[a];
-		s[a] = s[y - 1 - a];
-		s[y - 1 - a] = b;
+		for (i = 0; nill[i]; i++)
+			ibuf = handl_buf(buf, nill[i], ibuf);
+		return (6);
 	}
-	return (s);
+	for (i = 0; str[i]; i++)
+		;
+	j = i - 1;
+	for (; j >= 0; j--)
+	{
+		ibuf = handl_buf(buf, str[j], ibuf);
+	}
+	return (i);
 }
