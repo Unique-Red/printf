@@ -6,7 +6,7 @@ This is a simple implementation of printf function that formats and prints data
 ---
 
 ### Representation
-The _printf() function produces output according to a format which is described below. This function write its output to the stdout, the standard output stream. Returns the count of printed characters when the function is successful and 1 when the function fails.
+The _printf() function produces output according to a format which is described below. This function write its output to the the standard output stream, stdout. It returns the count of printed characters when the function is successful and 1 when the function fails.
 
 The available conversion specifiers are:
 ---
@@ -38,6 +38,7 @@ The available conversion specifiers are:
 
 ### Example
 ---
+```
 #include "main.h"
 #include <stdio.h>
 /**
@@ -63,6 +64,7 @@ int main(void)
   printf("%d\n", b); /*expected: 7*/
   return (0);
 }
+```
 
 # Authors
 <a href="https://github.com/Unique-Red/printf">Noah Useghan</a>
