@@ -1,51 +1,44 @@
 #include "main.h"
 
 /**
- * print_oct - print octal from decimal
- * @list: list
- * Return: pointer to string
+ * print_oct - prints decimal number in octal
+ * @arguments: input number
+ * @buf: buffer pointer
+ * @ibuf: index for buffer pointer
+ * Return: number of chars printed.
  */
-char *print_oct(va_list list)
+int print_oct(va_list arguments, char *buf, unsigned int ibuf)
 {
-	char *output;
-	int i = 0;
-	int len;
-	unsigned int num_cp = 0;
-	unsigned int num = va_arg(list, unsigned int);
+	int int_input, i, isnegative, count, first_digit;
+	char *octal, *binary;
 
-	len = 0;
-	num_cp = num;
-
-	while (num_cp > 0)
+	int_input = va_arg(arguments, int);
+	isnegative = 0;
+	if (int_input == 0)
 	{
-		num_cp /= 8;
-		len++;
+		ibuf = handl_buf(buf, '0', ibuf);
+		return (1);
 	}
-
-	output = malloc(sizeof(char) * len + 1);
-
-	if (output == NULL)
+	if (int_input < 0)
 	{
-		free(output);
-		return (NULL);
+		int_input = (int_input * -1) - 1;
+		isnegative = 1;
 	}
-
-	if (num == 0)
+	binary = malloc(sizeof(char) * (32 + 1));
+	binary = fill_binary_array(binary, int_input, isnegative, 32);
+	octal = malloc(sizeof(char) * (11 + 1));
+	octal = fill_oct_array(binary, octal);
+	for (first_digit = i = count = 0; octal[i]; i++)
 	{
-		output[i] = '\0';
-		return (output);
+		if (octal[i] != '0' && first_digit == 0)
+			first_digit = 1;
+		if (first_digit)
+		{
+			ibuf = handl_buf(buf, octal[i], ibuf);
+			count++;
+		}
 	}
-
-	while (len > 0)
-	{
-		output[i] = ((num % 8) + '0');
-		num /= 8;
-		i++;
-		len--;
-	}
-
-	rev_string(output);
-	output[i] = '\0';
-
-	return (output);
+	free(binary);
+	free(octal);
+	return (count);
 }

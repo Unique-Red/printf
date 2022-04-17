@@ -1,16 +1,26 @@
 #include "main.h"
 
 /**
- * print_s - print string
- * @list: va_list
- * Return: string
+ * print_str - writes the string to stdout
+ * @arguments: input string
+ * @buf: buffer pointer
+ * @ibuf: index for buffer pointer
+ * Return: On success 1.
  */
-char *print_s(va_list list)
+int print_str(va_list arguments, char *buf, unsigned int ibuf)
 {
-	char *s;
+	char *str;
+	unsigned int i;
+	char nill[] = "(null)";
 
-	s = va_arg(list, char *);
-	if (s == NULL)
-		return (s = "(null)");
-	return (s);
+	str = va_arg(arguments, char *);
+	if (str == NULL)
+	{
+		for (i = 0; nill[i]; i++)
+			ibuf = handl_buf(buf, nill[i], ibuf);
+		return (6);
+	}
+	for (i = 0; str[i]; i++)
+		ibuf = handl_buf(buf, str[i], ibuf);
+	return (i);
 }
