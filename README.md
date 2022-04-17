@@ -1,11 +1,11 @@
-## Printf
+# Printf
 ---
 
-### Summary
+## Summary
 This is a simple implementation of printf function that formats and prints data
 ---
 
-### Representation
+## Representation
 The _printf() function produces output according to a format which is described below. This function write its output to the the standard output stream, stdout. It returns the count of printed characters when the function is successful and 1 when the function fails.
 
 The available conversion specifiers are:
@@ -26,7 +26,7 @@ The available conversion specifiers are:
 * %s: Prints a string of characters.
 
 
-### Usage
+## Usage
 ---
 
 * All the files are to be compiled on Ubuntu 14.04 LTS
@@ -36,7 +36,7 @@ The available conversion specifiers are:
 * Compile your code with  $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 ---
 
-### Example
+## Example
 ---
 ```
 #include "main.h"
@@ -66,10 +66,10 @@ int main(void)
 }
 ```
 ---
-### File Functions
+## File Functions
 ---
 
-_printf.c
+### _printf.c
 Custom Printf Function That Performs Formatted Output Conversion And Print Data.
 
 #### main.h
@@ -87,120 +87,118 @@ Function That Concatenates The Buffer Characters.
 #### print_chr.c
 Function That Writes The Character C To Stdout.
 
-/* Indetifier : %c */
+/* Identifier : %c */
 #### print_str.c
 Function That Writes The String To Stdout.
 
-/* Indetifier : %s */
+/* Identifier : %s */
 #### print_int.c
 Function That Prints An Integer.
 
-/* Indetifier : %i or %d */
+/* Identifier : %i or %d */
 #### print_bnr.c
 Function That Prints Decimal In Binary.
 
-/* Indetifier : %b */
+/* Identifier : %b */
 #### print_oct.c
 Function That Prints Decimal In Octal.
 
-/* Indetifier : %o */
+/* Identifier : %o */
 #### print_hex.c
 Function That Prints Decimal In Hexadecimal.
 
-/* Indetifier : %x */
+/* Identifier : %x */
 #### print_upx.c
 Function That Prints Decimal In Uppercase Hexadecimal.
 
-/* Indetifier : %X */
+/* Identifier : %X */
 #### print_usr.c
 Function That Prints A String And Values Of Non-Printed Chars.
 
-/* Indetifier : %S */
+/* Identifier : %S */
 #### print_unt.c
 Function That Prints An Unsigned Integer.
 
-/* Indetifier : %u */
+/* Identifier : %u */
 #### print_rev.c
 Function That Writes The String To Stdout In Reverse.
 
-/* Indetifier : %r */
+/* Identifier : %r */
 #### print_rot.c
 Function That Writes The String To Stdout In Rot13.
 
-/* Indetifier : %R */
+/* Identifier : %R */
 #### print_add.c
 Function That Prints The Address Of An Input Variable.
 
-/* Indetifier : %p */
+/* Identifier : %p */
 #### print_long_oct.c
 Function That Prints Long Decimal Number In Octal.
 
-/* Indetifier : %lo */
+/* Identifier : %lo */
 #### print_long_hex.c
 Function That Prints Long Decimal Number In Hexadecimal.
 
-/* Indetifier : %lx */
+/* Identifier : %lx */
 #### print_long_int.c
 Function That Prints A Long Integer.
 
-/* Indetifier : %li */
+/* Identifier : %li */
 #### print_long_upx.c
 Function That Prints A Long Decimal In Uppercase Hexadecimal.
 
-/* Indetifier : %lX */
+/* Identifier : %lX */
 #### print_long_unt.c
 Function That Prints A Long Unsigned Integer.
 
-/* Indetifier : %lu */
+/* Identifier : %lu */
 #### print_short_oct.c
 Function That Prints Short Decimal Number In Octal.
 
-/* Indetifier : %ho */
+/* Identifier : %ho */
 #### print_short_hex.c
 Function That Prints Short Decimal Number In Hexadecimal.
 
-/* Indetifier : %hx */
+/* Identifier : %hx */
 #### print_short_int.c
 Function That Prints A Short Integer.
 
 #### print_short_upx.c
 Function That Prints A Short Decimal In Uppercase Hexadecimal.
 
-/* Indetifier : %hX */
+/* Identifier : %hX */
 #### print_short_unt.c
 Function That Prints A Short Unsigned Integer.
 
-/* Indetifier : %hu */
+/* Identifier : %hu */
 #### print_num_hex.c
 Function That Print A Number In Hexadecimal Begining With 0 And x.
 
-/* Indetifier : %#x */
+/* Identifier : %#x */
 #### print_num_oct.c
 Function That Prints A Number In Octal Begining With 0 And o.
 
-/* Indetifier : %#o */
+/* Identifier : %#o */
 #### print_num_upx.c
 Function That Prints A Number In Uppercase Hexadecimal.
 
-/* Indetifier : %#X */
+/* Identifier : %#X */
 #### print_plus_int.c
 Function That Prints An Integer With Plus Symbol.
 
-/* Indetifier : %+i */
+/* Identifier : %+i */
 #### print_space_int.c
 Function That Prints An Integer Begining With 0 And u.
 
-/* Indetifier : % i */
+/* Identifier : % i */
 #### ev_print_func.c
-Function That Returns The Amount Of Indetifiers.
+Function That Returns The Amount Of Identifiers.
 
 
 # Authors
 <a href="https://github.com/Unique-Red/printf">Noah Useghan</a>
-<a href="https://github.com/bryansomto/printf">Ike-Adinnu Somtochukwu</a>
 <br/>
+<a href="https://github.com/bryansomto/printf">Ike-Adinnu Somtochukwu</a>
  
 
- 
  # End
-=======
